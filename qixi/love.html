@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>lsy❤ycw</title>
+
+  <style>
+    body {
+      animation: color-change-2x 5s linear infinite alternate both;
+
+    }
+
+    .container {
+      width: 512px;
+      height: 380px;
+      margin: auto;
+      margin-top: 0;
+    }
+
+    .heart {
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      margin-top: -75px;
+      left: 50%;
+      margin-left: -75px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=");
+    }
+
+    .hometown {
+      font-family: 'Inconsolata', sans-serif;
+      font-weight: bold;
+      font-size: 2.0em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      width: 512px;
+      height: 512px;
+      color: #FFF;
+    }
+
+    #top {
+      width: 200px;
+      margin: auto;
+      position: relative;
+    }
+
+    #top span {
+      height: 350px;
+      position: absolute;
+      width: 20px;
+      left: 50%;
+      margin-left: -10px;
+      top: 110px;
+    }
+
+    .char1 {
+      transform: rotate(-36deg);
+    }
+
+    .char2 {
+      transform: rotate(-24deg);
+    }
+
+    .char3 {
+      transform: rotate(-12deg);
+    }
+
+    .char4 {
+      transform: rotate(0deg);
+    }
+
+    .char5 {
+      transform: rotate(12deg);
+    }
+
+    .char6 {
+      transform: rotate(24deg);
+    }
+
+    .char7 {
+      transform: rotate(36deg);
+    }
+
+    #bottom span {
+      height: 350px;
+      line-height: 700px;
+      position: absolute;
+      width: 20px;
+      left: 50%;
+      margin-left: -10px;
+      text-shadow: #555555 1px 1px;
+
+      top: 10px;
+    }
+
+    #bottom .char1 {
+      transform: rotate(36deg);
+    }
+
+    #bottom .char2 {
+      transform: rotate(23deg);
+    }
+
+    #bottom .char3 {
+      transform: rotate(18deg);
+    }
+
+    #bottom .char4 {
+      transform: rotate(9deg);
+    }
+
+    #bottom .char5 {
+      transform: rotate(0deg);
+    }
+
+    #bottom .char6 {
+      transform: rotate(-9deg);
+    }
+
+    #bottom .char7 {
+      transform: rotate(-18deg);
+    }
+
+    #bottom .char8 {
+      transform: rotate(-27deg);
+    }
+
+    #bottom .char9 {
+      transform: rotate(-36deg);
+    }
+
+    .city {
+      font-family: "Hammersmith One";
+      display: inline-block;
+      width: 100%;
+      height: 500px;
+      padding-top: 45px;
+      text-align: center;
+      font-size: 2.0em;
+      z-index: 100;
+      position: absolute;
+      top: 50%;
+      margin-top: -110px;
+    }
+
+    .city a {
+      font-size: 50px;
+      text-decoration: none;
+      color: aliceblue;
+      text-shadow: #555555 1px 1px;
+    }
+
+    .heart {
+      animation: HEARTBEAT 2.5s infinite;
+    }
+
+    #top span {
+      animation: BOUNCE 2.5s infinite;
+      text-shadow: #555555 1px 1px;
+    }
+
+    @keyframes HEARTBEAT {
+      0% {
+        transform: scale(1);
+      }
+
+      5% {
+        transform: scale(1.3);
+      }
+
+      10% {
+        transform: scale(1.1);
+      }
+
+      15% {
+        transform: scale(1.5);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes BOUNCE {
+      0% {
+        top: 110px;
+      }
+
+      10% {
+        top: 80px;
+      }
+
+      15% {
+        top: 85px;
+      }
+
+      20% {
+        top: 70px;
+      }
+
+      75% {
+        top: 110px;
+      }
+
+      100% {
+        top: 110px;
+      }
+    }
+
+    .text-shadow-pop-br {
+      -webkit-animation: text-shadow-pop-br 0.6s both;
+      animation: text-shadow-pop-br 0.6s both;
+      font-size: 70px;
+      width: 1000px;
+      letter-spacing: 10px;
+      position: absolute;
+      top: 90%;
+      left: -33%;
+    }
+
+
+    /*----------------------------------------
+ * animation text-shadow-pop-br
+ * ----------------------------------------
+ */
+
+
+    @keyframes text-shadow-pop-br {
+      0% {
+        text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+      }
+
+      100% {
+        text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555, 4px 4px #555555, 5px 5px #555555, 6px 6px #555555, 7px 7px #555555, 8px 8px #555555;
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+      }
+    }
+
+    /* 背景 */
+    @keyframes color-change-2x {
+      0% {
+        background: #34d88b
+      }
+
+      50% {
+        background: #44ffff;
+      }
+
+      100% {
+        background: #b888ff;
+      }
+    }
+
+    /* ------------------------------- */
+    .tiaozhuan {
+      display: flex;
+      justify-content: center;
+    }
+
+    .a {
+      position: relative;
+      top: 130px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      margin: 50px 330px;
+    }
+
+    .c,
+    .b {
+      font: 900 100px '';
+      line-height: 150px;
+      position: absolute;
+      color: rgb(130, 49, 184);
+      top: 0px;
+      /* 使文字上下移动时有0.4s的过渡效果 */
+      transition: .4s;
+      margin-right: 20px;
+
+    }
+
+    .c {
+      /* 裁剪文字的上半部分，括号里的四个值分别是
+            top，right，bottom，left */
+      clip-path: inset(49% 0 0 0);
+    }
+
+    .b {
+      /* 裁剪文字的下半部分 */
+      clip-path: inset(1% 0 50% 0);
+    }
+
+    .a:hover .b,
+    .a:hover .c {
+      /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+      top: calc(var(--i)*1px);
+    }
+
+    .a:hover .d {
+      opacity: 1;
+    }
+
+    .d {
+      text-decoration: none;
+      color: rgb(15, 111, 201);
+      font: 600 30px '';
+      line-height: 150px;
+      width: 500px;
+      text-align: center;
+      opacity: 0;
+      transition: .3s;
+      text-shadow: #555555 1px 1px;
+    }
+  </style>
+
+  <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="color-change-2x">
+    <div class="container bg">
+      <div class="hometown">
+        <div class="heart"></div>
+        <div id="top">
+          <span class="char1">袁</span>
+          <span class="char2">长</span>
+          <span class="char3">威</span>
+          <span class="char4"> </span>
+          <span class="char5">刘</span>
+          <span class="char6">书</span>
+          <span class="char7">宇</span>
+
+        </div>
+        <div class="city"><a href="index.html">永远在一起</a></div>
+        <div id="bottom">
+          <span class="char1">w</span>
+          <span class="char2">i</span>
+          <span class="char3">t</span>
+          <span class="char4">h</span>
+          <span class="char5"> </span>
+          <span class="char6">l</span>
+          <span class="char7">o</span>
+          <span class="char8">v</span>
+          <span class="char9">e</span>
+
+        </div>
+        <div class="tiaozhuan">
+          <div class="a">
+            <div class="b" style="--i:-30">BABE</div>
+            <div class="c" style="--i:30">BABE</div>
+            <a href="yx.html" class="d">影像</a>
+          </div>
+          <div class="a">
+            <div class="b" style="--i:-30">LOVER</div>
+            <div class="c" style="--i:30">LOVER</div>
+            <a href="xsdh.html" class="d">想说的话</a>
+          </div>
+          <!-- <div class="a">
+                                    <div class="b" style="--i:-30">GOAT</div>
+                                    <div class="c" style="--i:30">GOAT</div>
+                                    <a href="#" class="d">收藏/Collection</a>
+                                </div> -->
+        </div>
+        <div class="text-shadow-pop-br">今天是在一起的第<span class='tian'></span>天</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src='/qixi/js/jquery.js'></script>
+  <script type="text/javascript" src='/qixi/js/jquery.lettering.js'></script>
+
+  <div>
+</body>
+<script>
+  //倒计时
+  var inputTime = +new Date('2019-05-19 00:00:00');
+  var tian = document.querySelector('.tian');
+  djs();
+  setInterval(djs, 1000);
+  function djs() {
+    var date = new Date();
+    var now = date.getTime();
+    var timi = (now - inputTime) / 1000;
+    var t = parseInt(timi / 60 / 60 / 24);
+    tian.innerHTML = t;
+  }
+</script>
+
+</html>

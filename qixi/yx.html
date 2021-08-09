@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lsy🧡ycw</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgba(206, 182, 182, 0.637);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a {
+            margin-top: 60px;
+            margin-left: 430px;
+            position: relative;
+            width: 650px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .b {
+            width: 400px;
+            height: 500px;
+            transition: .4s;
+            background-size: cover;
+        }
+
+        .c {
+            width: 200px;
+            height: 500px;
+            display: flex;
+            /* 纵向布局 */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .d {
+            position: relative;
+            width: 200px;
+            height: 90px;
+            right: 0;
+            transition: .5s;
+            overflow: hidden;
+        }
+
+        .d img {
+            position: absolute;
+            width: 200px;
+            /* 小图片上移 */
+            transform: translate(0, -50px);
+            transition: .5s;
+            right: 0;
+        }
+
+        .d.dd {
+            opacity: 0;
+            right: 250px;
+        }
+
+        .d:hover img {
+            opacity: 0;
+            right: 250px;
+        }
+
+        /* ============--------------------=========== */
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        body {
+            background-color: rgb(243, 103, 103);
+        }
+
+        .baiyechuang {
+            margin: auto;
+            margin-top: 600PX;
+            margin-left: -730PX;
+        }
+
+        .byc img {
+            width: 700px;
+            height: 500px;
+
+        }
+
+        .main {
+            width: 805px;
+            height: 450px;
+            margin: 150px auto;
+            overflow: hidden;
+        }
+
+        .byc {
+            width: 160px;
+            float: left;
+            border-left: 1px solid #fff;
+            position: relative;
+            transition: all .5s;
+        }
+
+        .flag {
+            position: absolute;
+            /* 绝对定位 */
+            left: 0;
+            bottom: 053px;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5)
+        }
+
+        .main:hover .byc {
+            width: 40px;
+        }
+
+        .main .byc:hover {
+            width: 640px;
+        }
+
+        .topic {
+            width: 100%;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .topic-title {
+            text-align: center;
+            color: #222;
+        }
+
+        .topic-title-sub {
+            margin-bottom: 10px;
+        }
+
+        .topic-body {
+            width: 65%;
+            margin: 20px auto 30px;
+        }
+
+        .works-slider {
+            text-align: center;
+        }
+
+        .works-slider img {
+            width: 70%;
+        }
+
+
+        /*-----------------------------------------------------------------------*/
+        /*フッター*/
+        .page-footer {
+            height: 150px;
+            color: #fff;
+            text-align: center;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <div class="b"></div>
+        <div class="c">
+            <div class="d dd"><img src="/qixi/image/1.jpg" alt=""></div>
+            <div class="d"><img src="/qixi/image/2.jpg" alt=""></div>
+            <div class="d"><img src="/qixi/image/3.jpg" alt=""></div>
+            <div class="d"><img src="/qixi/image/4.jpg" alt=""></div>
+            <div class="d"><img src="/qixi/image/5.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="baiyechuang">
+        <ul class="main">
+            <li class='byc'>
+                <img src="/qixi/image/sr1.jpg" alt="">
+                <div class="flag">💖</div>
+            </li>
+            <li class='byc'>
+                <img src="/qixi/image/sr2.jpg" alt="">
+                <div class="flag">💟</div>
+            </li>
+            <li class='byc'>
+                <img src="/qixi/image/sr3.jpg" alt="">
+                <div class="flag">😻</div>
+            </li>
+            <li class='byc'>
+                <img src="/qixi/image/sr4.jpg" alt="">
+                <div class="flag">🌹</div>
+            </li>
+            <li class='byc'>
+                <img src="/qixi/image/sr5.jpg" alt="">
+                <div class="flag">😘</div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="splash-ani01"></div>
+    <div class="splash-ani02"></div>
+
+    <main>
+        <header class="page-header" id="scroll">
+
+            <div class="wrapper">
+
+                <div class="topic">
+
+
+                    <div class="works-slider">
+                        <img>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+    </main>
+</body>
+
+</div>
+<script>
+    // 获取左边大图的元素
+    let b = document.querySelector(".b")
+    // 获取右边小图的所有元素
+    let d = document.getElementsByClassName("d")
+
+    let time
+    let index = 0
+
+    // 设置一个重置函数
+    let a = function () {
+        for (let i = 0; i < d.length; i++) {
+            d[i].className = "d"
+        }
+    }
+    // 设置一个选中函数
+    let aa = function () {
+        // 先代入重置函数
+        a()
+        d[index].className = "d dd"
+    }
+    // 设置启动轮播图的时间函数
+    function ts() {
+        time = setInterval(function () {
+            aa()
+            index++
+            b.style.backgroundImage = "url('/qixi/image/" + [index] + ".jpg')"
+            if (index == 5) {
+                index = 0
+            }
+        }, 1500);
+    }
+    for (let i = 0; i < d.length; i++) {
+        // 鼠标移动到当前小图片上时触发
+        d[i].onmousemove = function () {
+            // 鼠标移动到当前小图片时右边大图片变成当前的小图片
+            b.style.backgroundImage = "url('/qixi/image/" + [i + 1] + ".jpg')"
+            // 鼠标移动到小图片上面时关闭定时器并重置定时，
+            // 鼠标移开后再继续执行
+            a()
+            clearInterval(time)
+            index = i + 1
+            ts()
+        }
+    }
+    // 执行轮播图
+    ts()
+    // 星空背景
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight, WEBGL);//3Dの場合は引数にWEBGLを忘れずに！
+        canvasSetup;
+        background(0);//再描画後に背景を再描画する
+    }
+
+    function setup() {
+        canvas = createCanvas(windowWidth, windowHeight, WEBGL);//2Dの場合は引数にWEBGLは要らない
+        canvas.position(0, 0);//canvasをページの原点に固定
+        canvas.style('z-index', '-1');//canvasを後ろに移動する
+        background(30);
+    }
+    function draw() {
+        frameRate(6);
+        rotateX(frameCount * random(0, 10));
+        rotateY(frameCount * random(0, 10));
+        line(random(200, 600), random(200, 600), 300, 300);
+        stroke(random(0, 255), random(0, 255), random(0, 255));
+        /*noStroke();
+        ellipse(random(200,600),random(200,600),50,100);
+        fill(random(0,255),random(0,255),random(0,255),60);*/
+    }
+    // ----------------------------------------
+    var stars;
+    var move = 600;
+    var canvas;
+
+    function canvasSetup() {
+        stars = new Array(floor(windowWidth / 2 + windowHeight / 2));
+
+        for (let i = 0; i < stars.length; i++) {
+            stars[i] = new Star();
+        }
+    }
+
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight, WEBGL);//3Dの場合は引数にWEBGL
+        canvasSetup;
+    }
+
+    function setup() {
+        canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+        canvas.position(0, 0);
+        canvas.style('z-index', '-100');
+        canvas.style('position', 'fixed');
+        canvas.style('top', '0');
+
+        canvasSetup();
+    }
+
+    function draw() {
+        background(0);
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].update();
+            stars[i].show();
+
+            if (random(0, 3000) < 1) {
+                stars[i].shine();
+            }
+        }
+    }
+
+    class Star {
+        constructor() {
+            this.x = random(-windowWidth - move, windowWidth + move);
+            this.y = random(-windowHeight - move, windowHeight + move);
+            this.pX = this.x;
+            this.pY = this.y;
+            this.z = random(0, 500);
+            this.rad = map(this.z, 0, 500, 5, 0.1);
+            this.shineAppear = false;
+            this.lenMAX = map(this.z, 0, 500, 40, 4);
+            this.len = this.lenMAX;
+            this.angle = map(this.z, 0, 500, 1.5, 0.1);
+        }
+        update() {
+            if (this.x > this.pX - (move * this.angle) && map(mouseX, 0, windowWidth / 2, -2, 0) < 0) {
+                this.x += this.angle * map(mouseX, 0, windowWidth / 2, -2, 0);
+            }
+            if (this.x < this.pX + (move * this.angle) && map(mouseX, windowWidth / 2, windowWidth, 0, 2) > 0) {
+                this.x += this.angle * map(mouseX, windowWidth / 2, windowWidth, 0, 2);
+            }
+
+            if (this.y > this.pY - (move * this.angle) && map(mouseY, 0, windowHeight / 2, -2, 0) < 0) {
+                this.y += this.angle * map(mouseY, 0, windowHeight / 2, -2, 0);
+            }
+            if (this.y < this.pY + (move * this.angle) && map(mouseY, windowHeight / 2, windowHeight, 0, 2) > 0) {
+                this.y += this.angle * map(mouseY, windowHeight / 2, windowHeight, 0, 2);
+            }
+
+
+            if (this.len < this.lenMAX) {
+                this.len += 1;
+            }
+        }
+        show() {
+            noStroke();
+            fill(255);
+            ellipse(this.x, this.y, this.rad, this.rad);
+
+            if (this.len < this.lenMAX) {
+                stroke(255);
+                line(this.x, this.y - this.len, this.x, this.y - this.lenMAX);
+                line(this.x, this.y + this.len, this.x, this.y + this.lenMAX);
+                line(this.x - this.lenMAX, this.y, this.x - this.len, this.y);
+                line(this.x + this.lenMAX, this.y, this.x + this.len, this.y);
+            }
+        }
+        shine() {
+            if (this.len >= this.lenMAX) {
+                this.len = 1;
+            }
+        }
+
+    }
+    // ----------------------------------------
+    $(function () {
+        let device_mobile = 900;
+
+
+        /*-----------------------------------------------------------------------
+       ページのローダー*/
+        var loader = $('.loader-wrapper');
+
+
+        //ページの読み込みが完了したらアニメーションを非表示
+        $(window).on('load', function () {
+            loader.fadeOut();
+            $('.splash-ani01').addClass('appear');//appearクラス付与
+            $('.splash-ani02').addClass('appear');
+        });
+        //ページの読み込みが完了してなくても3.5秒後にアニメーションを非表示にする
+        setTimeout(function () {
+            loader.fadeOut();
+            $('.splash-ani01').addClass('appear');//appearクラス付与
+            $('.splash-ani02').addClass('appear');
+        }, 3500);
+
+
+
+        /*-----------------------------------------------------------------------
+       ページのスクロール*/
+        $('#scroll a[href*="#"]').click(function () {
+            var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+            var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+
+            //取得した位置にスクロール(画面幅によってスクロール位置を変更する)
+            if (window.matchMedia('(min-width:' + device_mobile + 'px)').matches) {
+                $('body,html').animate({ scrollTop: pos - 65 + "px" }, 600);
+            }
+            else {
+                $('body,html').animate({ scrollTop: pos - 10 + "px" }, 500);
+            }
+            return false;
+        });
+
+        /*-----------------------------------------------------------------------
+       要素のフェードインのアニメーション*/
+        $(window).on('load scroll', function () {
+            $('.topic').each(function () {
+                //ターゲットの位置を取得
+                var target = $(this).offset().top;
+                //スクロール量を取得
+                var scroll = $(window).scrollTop();
+                //ウィンドウの高さを取得
+                var height = $(window).height();
+                //フェードインしているかどうかの判定
+                var isFeedin = false;
+
+                //ターゲットまでスクロールするとフェードインする
+                if ((scroll > target - height + 200) && (isFeedin == false)) {
+                    //クラスを付与
+                    $(this).addClass('active');
+                    isFeedin = true;
+                }
+
+                //ターゲットを超えてスクロールするとフェードアウトする
+                if ((scroll < target - height - 200) || ((scroll > target + 700)) && isFeedin) {
+                    //クラスを外す
+                    console.log("topic");
+                    $(this).removeClass('active');
+                    isFeedin = false;
+                }
+
+            });
+        });
+
+
+    })
+
+</script>
+</body>
+
+</html>

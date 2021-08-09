@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>lsy💛ycw</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .shell {
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+
+    .shell .shicha div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+
+    .image {
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .text {
+        height: 50vh;
+        background-color: #fff;
+    }
+
+    .text h1 {
+        color: #000;
+        font-size: 50px;
+    }
+
+    .heading {
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+
+    /* 按钮特效 */
+    #shiny-shadow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160vh;
+        background-color: #1c2541;
+        flex-direction: column;
+    }
+
+    .anniu {
+        flex: 1;
+
+    }
+
+    .ss {
+        border: 2px solid white;
+        background: transparent;
+        text-transform: uppercase;
+        color: white;
+        padding: 15px 50px;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .ss span {
+        z-index: 20;
+    }
+
+    .ss::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -36px;
+        left: -100px;
+        background: white;
+        width: 50px;
+        height: 125px;
+        opacity: 20%;
+        transform: rotate(-45deg);
+    }
+
+    .ss:hover::after {
+        left: 120%;
+        transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+        /* 动态移动，从x1y1-->x2y2 */
+
+    }
+
+    .hua {
+        flex: 4;
+        color: azure;
+    }
+
+    /* 文字闪烁动画 */
+    @keyframes appear {
+        0% {
+
+            letter-spacing: -0.5em;
+            -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+        }
+
+        100% {
+            -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+        }
+    }
+
+    .hua {
+        animation: 0;
+        line-height: 40px;
+        margin-left: 190px;
+        margin-top: -130px;
+        font-size: 20px;
+        display: none;
+    }
+
+    .hua span {
+        margin-left: 900px;
+    }
+</style>
+
+
+
+<body>
+    <div class="shell">
+        <div class="shicha">
+            <div class="image" style="background-image: url('/qixi/image/wallhaven-1.jpg');"></div>
+            <div class="heading">
+                <h1>我应该为自己庆幸。</h1>
+            </div>
+            <div class="text">
+                <h1>我一辈子</h1>
+            </div>
+
+            <div class="image" style="background-image: url('/qixi/image/wallhaven-2.jpg');"></div>
+            <div class="heading">
+                <h1>走过许多地方的路</h1>
+            </div>
+            <div class="text">
+                <h1>行过许多地方的桥</h1>
+            </div>
+
+            <div class="image" style="background-image: url('/qixi/image/wallhaven-5.jpg');"></div>
+            <div class="heading">
+                <h1>喝过许多种酒</h1>
+            </div>
+            <div class="text">
+                <h1>看过许多次云</h1>
+            </div>
+
+            <div class="image" style="background-image: url('/qixi/image/wallhaven-3.jpg');"></div>
+            <div class="heading">
+                <h1>却只爱过一个正当最好年龄的人。</h1>
+            </div>
+        </div>
+        <div id="shiny-shadow">
+            <div class="anniu">
+                <button class="ss"> <span>点我💌</span></button>
+            </div>
+            <div class="hua">
+                异地恋是挺辛苦的，但我不希望有谁因为一时的距离和一些细枝末节的疏忽，错过本该相守一生的人。<br>
+                我一个人的时候，看到美食会想带你去吃；<br>
+                看到新上映的电影会想和你一起去看；<br>
+                看到有趣的物件，会想买来送给你。<br>
+                但是因为你不在身边，我对这一切都失去了兴趣，都没有了意义。<br>
+                我不是不爱出去玩，没有你总是差点意思。<br>
+                异地恋的过程本来就是没有意义的，没有人会喜欢异地恋。<br>
+                而能让我们坚持下去的就是有一天终于熬过了这艰难的时光，从此之后可以面对面的交流，而不是靠电话和视频。<br>
+                我也没有一个明确的目标，我不知道现在的想法在毕业后能否付诸实践，<br>总是周期性的担心未来，又周期性的充满斗志。没有经历社会毒打前，我还是按着自己喜欢的事，按自己的想法来自学网页吧。<br>
+                有时候度日如年，有时候却又欣慰我们能彼此陪伴，觉得日子并不是那么难熬了。<br>
+                总之，和你在一起很开心，尽管伴随着争吵，也改变不了我们彼此相爱💏的事实。<br>
+                你总说羡慕我，父母每天都在身边，其实我也羡慕你，我巴不得他们一天都不回来，禹传潼也说羡慕我，能找到自己喜欢的事。<br>答应我，宝贝，别羡慕其他人。<br>我们有我们自己的轨迹，我们在一点点靠近。在我们艰难坚持的同时，也有人在羡慕我们。<br>
+                如果你要去复读，就放心去吧，我也会好好练本事，争取早日工作，来找你。<br>我会陪着你，一起努力。不要给自己留遗憾。<br>想做什么就去做吧，我会等你，你也等着我，进去以后也不要怕，记得我每天都在想你。<br>
+                我已经迫不及待想过上财富自由的日子了，可能实现会很难，但是光是想想都很让人兴奋。<br>
+                这是写给你的网站，专属于你的文字，可能我会不断更新，记得时不时点进来看看。<br>
+                <br>
+                <span>威💗<br></span>
+                <span>2021.8.14<br></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var ss = document.querySelector('.ss');
+    var text = document.querySelector('.hua');
+    ss.addEventListener('click', function () {
+        text.style.animation = 'appear  1s cubic-bezier(0.750, 0.285, 0.680, 0.530) both';
+        text.style.display = 'block';
+
+    })
+</script>
+
+</html>
